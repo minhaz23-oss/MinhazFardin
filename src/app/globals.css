@@ -1,21 +1,184 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
-
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
+html {
+  scroll-behavior: smooth;
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
+
+body {
+  font-family: var(--font-funnel-display), sans-serif;
+}
+a {
+  text-decoration: none; /* Remove underline */
+  color: inherit; /* Inherit text color */
+  display: inline-flex; /* Match button's display style */
+  padding: 0; /* Reset padding */
+  margin: 0; /* Reset margin */
+  line-height: normal; /* Reset line-height */
+}
+
+@keyframes bubble {
+  0%, 100% {
+    transform: scale(1) translate(-50%, -50%);
+    box-shadow: 0 0 10px rgba(255, 255, 255, 0.5), 0 0 20px rgba(255, 255, 255, 0.2);
+  }
+  50% {
+    transform: scale(1.2) translate(-50%, -50%);
+    box-shadow: 0 0 15px rgba(255, 255, 255, 0.6), 0 0 30px rgba(255, 255, 255, 0.3);
   }
 }
 
-body {
-  color: var(--foreground);
-  background: var(--background);
-  font-family: Arial, Helvetica, sans-serif;
+
+/* Initial States */
+.animate-up {
+  opacity: 0;
+  transform: translateY(100%);
+}
+.animate-fade {
+  opacity: 0;
+}
+.styled-button {
+  position: relative;
+  display: inline-block;
+  padding: 0.5rem 2rem;
+  background-color: rgba(255, 255, 255, 0.1); /* Semi-transparent white */
+  backdrop-filter: blur(10px); /* Blur effect for glassmorphism */
+  color: white;
+  font-weight: bold;
+  border-radius: 0.375rem;
+  border: 1px solid rgba(255, 255, 255, 0.3); /* Semi-transparent border */
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1), 0 1px 3px rgba(0, 0, 0, 0.08); /* Subtle shadow */
+  overflow: hidden;
+  cursor: pointer;
+  transition: background-color 0.3s ease-in-out, color 0.3s ease-in-out;
+}
+
+/* Corner triangles */
+.corner {
+  position: absolute;
+  width: 10px;
+  height: 10px;
+  border-style: solid;
+  opacity: 0; /* Initially hidden */
+  transition: transform 0.3s ease-in-out, opacity 0.3s ease-in-out, top 0.3s, right 0.3s, bottom 0.3s, left 0.3s;
+}
+
+/* Top-right corner */
+.corner.top-right {
+  top: 15px;
+  right: 15px;
+  border-right: 2px solid var(--corner-color, white);
+  border-top: 2px solid var(--corner-color, white);
+}
+
+/* Bottom-left corner */
+.corner.bottom-left {
+  bottom: 15px;
+  left: 15px;
+  border-bottom: 2px solid var(--corner-color, white);
+  border-left: 2px solid var(--corner-color, white);
+}
+
+/* Hover effect for top-right corner */
+.styled-button:hover .corner.top-right {
+  top: 5px;
+  right: 5px;
+  opacity: 1;
+}
+
+/* Hover effect for bottom-left corner */
+.styled-button:hover .corner.bottom-left {
+  bottom: 5px;
+  left: 5px;
+  opacity: 1;
+}
+.styled-button:hover {
+  background-color: rgba(255, 255, 255, 0.2); /* Semi-transparent white */
+  color: white;
+}
+.icon {
+  position: absolute;
+  bottom: 0;  /* All icons start at the bottom */
+  font-size: 50px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+@keyframes spin-reverse {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(-360deg);
+  }
+}
+
+.animate-spin-reverse {
+  animation: spin-reverse 1s linear infinite;
+}
+
+
+@layer base {
+  :root {
+    --background: 0 0% 100%;
+    --foreground: 240 10% 3.9%;
+    --card: 0 0% 100%;
+    --card-foreground: 240 10% 3.9%;
+    --popover: 0 0% 100%;
+    --popover-foreground: 240 10% 3.9%;
+    --primary: 240 5.9% 10%;
+    --primary-foreground: 0 0% 98%;
+    --secondary: 240 4.8% 95.9%;
+    --secondary-foreground: 240 5.9% 10%;
+    --muted: 240 4.8% 95.9%;
+    --muted-foreground: 240 3.8% 46.1%;
+    --accent: 240 4.8% 95.9%;
+    --accent-foreground: 240 5.9% 10%;
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 0 0% 98%;
+    --border: 240 5.9% 90%;
+    --input: 240 5.9% 90%;
+    --ring: 240 10% 3.9%;
+    --chart-1: 12 76% 61%;
+    --chart-2: 173 58% 39%;
+    --chart-3: 197 37% 24%;
+    --chart-4: 43 74% 66%;
+    --chart-5: 27 87% 67%;
+    --radius: 0.5rem;
+  }
+  .dark {
+    --background: 240 10% 3.9%;
+    --foreground: 0 0% 98%;
+    --card: 240 10% 3.9%;
+    --card-foreground: 0 0% 98%;
+    --popover: 240 10% 3.9%;
+    --popover-foreground: 0 0% 98%;
+    --primary: 0 0% 98%;
+    --primary-foreground: 240 5.9% 10%;
+    --secondary: 240 3.7% 15.9%;
+    --secondary-foreground: 0 0% 98%;
+    --muted: 240 3.7% 15.9%;
+    --muted-foreground: 240 5% 64.9%;
+    --accent: 240 3.7% 15.9%;
+    --accent-foreground: 0 0% 98%;
+    --destructive: 0 62.8% 30.6%;
+    --destructive-foreground: 0 0% 98%;
+    --border: 240 3.7% 15.9%;
+    --input: 240 3.7% 15.9%;
+    --ring: 240 4.9% 83.9%;
+    --chart-1: 220 70% 50%;
+    --chart-2: 160 60% 45%;
+    --chart-3: 30 80% 55%;
+    --chart-4: 280 65% 60%;
+    --chart-5: 340 75% 55%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border outline-ring/50;
+  }
+  body {
+    @apply bg-background text-foreground;
+  }
 }
