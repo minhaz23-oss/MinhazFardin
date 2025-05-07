@@ -16,13 +16,13 @@ export const projectDetails = [
         techStack: ["React", "Next", "MongoDB"],
         link: 'https://matrimony-nine.vercel.app/' 
     }, {
-        name: "nothing",
-        detailedDesc: 'nothing',
-        cardImage: '/nothing.png',
-        bgColor: "#808080",
-        bgImage: '/nothingBg.png',
-        techStack: ["React", "Node", "MongoDB"],
-        link: ''
+        name: "PrepAi",
+        detailedDesc: 'A platform where you can generate your own unique interview questions and also give interviews . Ai will generate and take the interview and give you a score and a feedback based on your performance, so that you can improve.',
+        cardImage: '/PrepAi.png',
+        bgColor: "#1E3A8A",
+        bgImage: '/PrepAiBg.png',
+        techStack: ["React", "Next", "Firebase"],
+        link: 'https://prep-ai-rosy.vercel.app/'
     }
 ]
 
