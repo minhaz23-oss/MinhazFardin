@@ -14,7 +14,7 @@ export const projectDetails = [
         bgColor: "#5672a6",
         bgImage: '/matrimonyBg.png',
         techStack: ["React", "Next", "MongoDB"],
-        link: 'https://matrimony-nine.vercel.app/' 
+        link: 'https://biyaa-6nh5.vercel.app/' 
     }, {
         name: "PrepAi",
         detailedDesc: 'A platform where you can generate your own unique interview questions and also give interviews . Ai will generate and take the interview and give you a score and a feedback based on your performance, so that you can improve.',
