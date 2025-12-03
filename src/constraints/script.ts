@@ -15,7 +15,7 @@ export const projectDetails = [
     name: "Matrimony",
     detailedDesc: "A sophisticated matchmaking platform designed to help individuals find their ideal partners based on detailed preferences, interests, and location.",
     cardImage: '/matrimony.png',
-    bgColor: "#5672a6",
+    bgColor: "#b1914dff",
     bgImage: matrimonyBg,
     techStack: ["React", "Next", "MongoDB"],
     link: 'https://biyaa-6nh5.vercel.app/'
@@ -102,5 +102,36 @@ export const testimonials = [
     comment: "Minhaz is a true professional. The website he developed for my business has significantly boosted our online presence and brought in more clients. Thank you for your amazing work!",
     image: "/pfp4.jpg",
     rating: 5
+  }
+];
+
+export const otherProjects = [
+  {
+    name: "Portfolio V1",
+    description: "My first portfolio website built with HTML, CSS, and JavaScript.",
+    techStack: ["HTML", "CSS", "JavaScript"],
+    link: "https://github.com/minhaz/portfolio-v1",
+    github: "https://github.com/minhaz/portfolio-v1"
+  },
+  {
+    name: "Weather App",
+    description: "A simple weather application using OpenWeatherMap API.",
+    techStack: ["React", "API"],
+    link: "https://weather-app-demo.vercel.app",
+    github: "https://github.com/minhaz/weather-app"
+  },
+  {
+    name: "Task Manager",
+    description: "A minimal todo list application with local storage support.",
+    techStack: ["React", "Tailwind"],
+    link: "https://task-manager-demo.vercel.app",
+    github: "https://github.com/minhaz/task-manager"
+  },
+  {
+    name: "Calculator",
+    description: "A fully functional calculator with dark mode support.",
+    techStack: ["JavaScript", "CSS"],
+    link: "https://calculator-demo.vercel.app",
+    github: "https://github.com/minhaz/calculator"
   }
 ];

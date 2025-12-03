@@ -105,7 +105,7 @@ const Hero = ({ onAnimationComplete }: any) => {
 
 
   return (
-    <section id="Home" className="w-full h-fit sm:h-[calc(100vh-70px)] pt-[50px]">
+    <section id="Home" className="w-full h-fit sm:h-[calc(100vh-70px)] ">
       <div className="w-full h-fit sm:h-[60%] flex relative">
         <div
           ref={horizontalBorderRef}

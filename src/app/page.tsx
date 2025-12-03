@@ -10,9 +10,9 @@ export default function Home() {
   return (
     <ClientWrapper>
       <main className=" w-full min-h-screen  ">
-        <div className="fixed top-0 w-full mb-[70px]  z-50">
+        {/* <div className="fixed top-0 w-full mb-[70px]  z-50">
           <Nav />
-        </div>
+        </div> */}
         <MouseFollower />
         <HeroAndProject />
 

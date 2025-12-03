@@ -16,16 +16,16 @@ const Testimonials = () => {
   const renderCard = (testimonial: typeof testimonialsWithIndex[0]) => (
     <div
       key={testimonial.originalIndex}
-      className={`relative bg-black border border-neutral-800 rounded-2xl p-8 transition-all duration-500 cursor-default group ${hoveredIndex !== null && hoveredIndex !== testimonial.originalIndex
+      className={`relative bg-black border border-neutral-800 rounded-2xl p-6 transition-all duration-500 cursor-default group ${hoveredIndex !== null && hoveredIndex !== testimonial.originalIndex
         ? "blur-[2px] opacity-50 scale-95"
         : "hover:scale-[1.02] hover:shadow-2xl hover:border-neutral-700"
         }`}
       onMouseEnter={() => setHoveredIndex(testimonial.originalIndex)}
       onMouseLeave={() => setHoveredIndex(null)}
     >
-      <Quote className="absolute top-6 right-6 text-neutral-800 w-10 h-10 group-hover:text-neutral-700 transition-colors duration-300" />
+      <Quote className="absolute top-5 right-5 text-neutral-800 w-8 h-8 group-hover:text-neutral-700 transition-colors duration-300" />
 
-      <div className="flex gap-1 mb-6">
+      <div className="flex gap-1 mb-4">
         {[...Array(5)].map((_, i) => (
           <Star
             key={i}
@@ -35,12 +35,12 @@ const Testimonials = () => {
         ))}
       </div>
 
-      <p className="text-neutral-300 text-lg leading-relaxed mb-8 font-light relative z-10">
+      <p className="text-neutral-300 text-base leading-relaxed mb-6 font-light relative z-10">
         "{testimonial.comment}"
       </p>
 
       <div className="flex items-center gap-4">
-        <div className="relative w-12 h-12 rounded-full overflow-hidden border-2 border-neutral-800 group-hover:border-neutral-600 transition-colors">
+        <div className="relative w-10 h-10 rounded-full overflow-hidden border-2 border-neutral-800 group-hover:border-neutral-600 transition-colors">
           <img
             src={testimonial.image}
             alt={testimonial.name}
@@ -48,8 +48,8 @@ const Testimonials = () => {
           />
         </div>
         <div>
-          <h4 className="text-white font-bold text-base tracking-wide">{testimonial.name}</h4>
-          <p className="text-neutral-500 text-sm font-medium">{testimonial.title}</p>
+          <h4 className="text-white font-bold text-sm tracking-wide">{testimonial.name}</h4>
+          <p className="text-neutral-500 text-xs font-medium">{testimonial.title}</p>
         </div>
       </div>
     </div>

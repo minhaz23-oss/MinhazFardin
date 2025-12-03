@@ -40,6 +40,18 @@ const Projects = () => {
           />
         );
       })}
+
+      <div className="w-full flex justify-center mt-10 pb-10">
+        <a
+          href="/projects"
+          className="group relative px-8 py-4 bg-black text-white rounded-full overflow-hidden transition-all hover:scale-105"
+        >
+          <span className="relative z-10 font-bold text-lg group-hover:text-black transition-colors duration-300">
+            See All Projects
+          </span>
+          <div className="absolute inset-0 bg-white transform scale-x-0 group-hover:scale-x-100 transition-transform duration-300 origin-left"></div>
+        </a>
+      </div>
     </section>
   );
 };
