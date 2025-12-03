@@ -6,6 +6,8 @@ import { skills } from "@/constraints/script";
 import ScrollTrigger from "gsap/ScrollTrigger";
 
 
+import GithubGraph from "./GithubGraph";
+
 const AboutMe = () => {
   const textRef = useInteractiveText();
   const aboutMeTextRef = useRef<HTMLDivElement | null>(null);
@@ -94,6 +96,11 @@ const AboutMe = () => {
           ))}
         </div>
       </div>
+
+      <div className="w-full h-fit mt-16 mb-10">
+        <GithubGraph />
+      </div>
+
       <div className=" w-full h-fit mt-10 flex justify-center items-center">
         <p ref={typerWriterRef} className=" text-[18px] sm:text-[20px] leading-[1.2] italic text-center">"Turning vision into reality through code, one project at a time."</p>
       </div>
