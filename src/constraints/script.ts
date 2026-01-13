@@ -40,7 +40,7 @@ export const projectDetails = [
     bgColor: "#000",
     bgImage: codeExplainer,
     techStack: ["React", "Next", "Firebase"],
-    link: 'https://code-explainer-ai.vercel.app/'
+    link: 'https://code-explainer-ai-eta.vercel.app/'
   },
   {
     name: "Movie Recommendation",
@@ -49,7 +49,7 @@ export const projectDetails = [
     bgColor: "#54568e",
     bgImage: movieRecommendation,
     techStack: ["React", "Next", "MongoDB"],
-    link: 'https://movie-recommendation.vercel.app/'
+    link: 'https://movie-recommendation-two-phi.vercel.app/'
   },
   {
     name: "GitHub Repo Explainer",
@@ -58,7 +58,7 @@ export const projectDetails = [
     bgColor: "#5b1f60",
     bgImage: githubRepoExplainer,
     techStack: ["React", "Next", "Firebase"],
-    link: 'https://github-repo-explainer.vercel.app/'
+    link: 'https://codetoexplaination.vercel.app/'
   }
 ]
 
