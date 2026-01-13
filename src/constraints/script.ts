@@ -1,6 +1,9 @@
-import ieltsprep from '../../public/ieltsprep.png';
-import matrimonyBg from '../../public/matrimonyBg.png';
-import PrepAiBg from '../../public/PrepAiBg.png';
+const ieltsprep = '/ieltsprep.png';
+const matrimonyBg = '/matrimonyBg.png';
+const PrepAiBg = '/PrepAiBg.png';
+const codeExplainer = '/code-explainer.png';
+const movieRecommendation = '/movie-recommendation.png';
+const githubRepoExplainer = '/github-repo-explainer.png';
 
 export const projectDetails = [
   {
@@ -11,7 +14,8 @@ export const projectDetails = [
     bgImage: ieltsprep,
     techStack: ["React", "Next", "MongoDB", 'Firebase'],
     link: 'https://ieltsprep-sigma.vercel.app/'
-  }, {
+  },
+  {
     name: "Matrimony",
     detailedDesc: "A sophisticated matchmaking platform designed to help individuals find their ideal partners based on detailed preferences, interests, and location.",
     cardImage: '/matrimony.png',
@@ -19,7 +23,8 @@ export const projectDetails = [
     bgImage: matrimonyBg,
     techStack: ["React", "Next", "MongoDB"],
     link: 'https://biyaa-6nh5.vercel.app/'
-  }, {
+  },
+  {
     name: "PrepAi",
     detailedDesc: 'An AI-powered interview preparation platform that generates unique questions, conducts simulated interviews, and provides detailed feedback and scoring to enhance performance.',
     cardImage: '/PrepAi.png',
@@ -27,6 +32,33 @@ export const projectDetails = [
     bgImage: PrepAiBg,
     techStack: ["React", "Next", "Firebase"],
     link: 'https://prep-ai-rosy.vercel.app/'
+  },
+  {
+    name: "Code Explainer AI",
+    detailedDesc: "An AI-driven tool that simplifies complex code snippets by providing clear explanations, enhancing understanding for developers of all levels.",
+    cardImage: "/code-explainer.png",
+    bgColor: "#000",
+    bgImage: codeExplainer,
+    techStack: ["React", "Next", "Firebase"],
+    link: 'https://code-explainer-ai.vercel.app/'
+  },
+  {
+    name: "Movie Recommendation",
+    detailedDesc: "A smart movie recommendation system that suggests personalized films based on your preferences, viewing history, and mood.",
+    cardImage: '/movie-recommendation.png',
+    bgColor: "#54568e",
+    bgImage: movieRecommendation,
+    techStack: ["React", "Next", "MongoDB"],
+    link: 'https://movie-recommendation.vercel.app/'
+  },
+  {
+    name: "GitHub Repo Explainer",
+    detailedDesc: 'An intelligent tool that analyzes GitHub repositories and provides comprehensive explanations of project structure, code patterns, and functionality.',
+    cardImage: '/github-repo-explainer.png',
+    bgColor: "#5b1f60",
+    bgImage: githubRepoExplainer,
+    techStack: ["React", "Next", "Firebase"],
+    link: 'https://github-repo-explainer.vercel.app/'
   }
 ]
 

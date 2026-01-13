@@ -63,8 +63,9 @@ const ProjectCard = ({ project, index, progress, range, targetScale }: Props) =>
                           <Image
                             src={skill.icon}
                             alt={tech}
-                            fill
+                             height={30}
                             className="object-contain"
+                            width={16}
                           />
                         </div>
                       )}
@@ -88,12 +89,14 @@ const ProjectCard = ({ project, index, progress, range, targetScale }: Props) =>
 
           <div className="relative w-full sm:w-[60%] h-[200px] sm:h-full rounded-[25px] overflow-hidden border border-white/10">
             <div
-              className="w-full h-full flex items-center"
+              className="w-full h-full flex items-center justify-center"
             >
               <Image
                 src={project.bgImage}
                 alt={project.name}
-                className="w-full h-auto object-contain"
+                className="w-full h-full object-cover"
+                width={600}
+                height={400}
               />
             </div>
           </div>
