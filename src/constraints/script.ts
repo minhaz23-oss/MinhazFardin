@@ -13,16 +13,18 @@ export const projectDetails = [
     bgColor: "#cc0e1e",
     bgImage: ieltsprep,
     techStack: ["React", "Next", "MongoDB", 'Firebase'],
-    link: 'https://ieltsprep-sigma.vercel.app/'
+    link: 'https://ieltsprep-sigma.vercel.app/',
+    githubLink:"https://github.com/minhaz23-oss/ieltsprep"
   },
   {
-    name: "Matrimony",
+    name: "Biyaa",
     detailedDesc: "A sophisticated matchmaking platform designed to help individuals find their ideal partners based on detailed preferences, interests, and location.",
     cardImage: '/matrimony.png',
     bgColor: "#b1914dff",
     bgImage: matrimonyBg,
     techStack: ["React", "Next", "MongoDB"],
-    link: 'https://biyaa-6nh5.vercel.app/'
+    link: 'https://biyaa-6nh5.vercel.app/',
+    githubLink:"https://github.com/minhaz23-oss/biyaa"
   },
   {
     name: "PrepAi",
@@ -31,7 +33,8 @@ export const projectDetails = [
     bgColor: "#1E3A8A",
     bgImage: PrepAiBg,
     techStack: ["React", "Next", "Firebase"],
-    link: 'https://prep-ai-rosy.vercel.app/'
+    link: 'https://prep-ai-rosy.vercel.app/',
+    githubLink:"https://github.com/minhaz23-oss/prepAI"
   },
   {
     name: "Code Explainer AI",
@@ -40,7 +43,8 @@ export const projectDetails = [
     bgColor: "#000",
     bgImage: codeExplainer,
     techStack: ["React", "Next", "Firebase"],
-    link: 'https://code-explainer-ai-eta.vercel.app/'
+    link: 'https://code-explainer-ai-eta.vercel.app/',
+    githubLink:"https://github.com/minhaz23-oss/code-explainer-ai"
   },
   {
     name: "Movie Recommendation",
@@ -49,7 +53,8 @@ export const projectDetails = [
     bgColor: "#54568e",
     bgImage: movieRecommendation,
     techStack: ["React", "Next", "MongoDB"],
-    link: 'https://movie-recommendation-two-phi.vercel.app/'
+    link: 'https://movie-recommendation-two-phi.vercel.app/',
+    githubLink:"https://github.com/minhaz23-oss/movie-recommendation"
   },
   {
     name: "GitHub Repo Explainer",
@@ -58,7 +63,8 @@ export const projectDetails = [
     bgColor: "#5b1f60",
     bgImage: githubRepoExplainer,
     techStack: ["React", "Next", "Firebase"],
-    link: 'https://codetoexplaination.vercel.app/'
+    link: 'https://codetoexplaination.vercel.app/',
+    githubLink:"https://github.com/minhaz23-oss/codetoexplaination"
   }
 ]
 

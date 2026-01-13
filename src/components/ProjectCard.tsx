@@ -4,6 +4,7 @@ import React, { useRef } from "react";
 import Image, { StaticImageData } from "next/image";
 import { useScroll, useTransform, motion, MotionValue } from "framer-motion";
 import { BsArrowUpRight } from "react-icons/bs";
+import { FaGithub } from "react-icons/fa";
 import { skills } from "@/constraints/script";
 
 interface ProjectDetails {
@@ -14,6 +15,7 @@ interface ProjectDetails {
   bgImage: string | StaticImageData;
   cardImage: string;
   detailedDesc: string;
+  githubLink: string;
 }
 
 interface Props {
@@ -74,6 +76,7 @@ const ProjectCard = ({ project, index, progress, range, targetScale }: Props) =>
                   );
                 })}
               </div>
+            <div className="flex gap-3">
 
               <a
                 href={project.link}
@@ -84,6 +87,8 @@ const ProjectCard = ({ project, index, progress, range, targetScale }: Props) =>
                 Visit Project
                 <BsArrowUpRight className="transition-transform group-hover:translate-x-1 group-hover:-translate-y-1" />
               </a>
+              <a href={project.githubLink} target="_blank" rel="noreferrer" className="flex items-center gap-2 text-white hover:underline group"><FaGithub className="text-[30px] transition-transform group-hover:translate-x-1 group-hover:-translate-y-1" /></a>
+            </div>
             </div>
           </div>
 
